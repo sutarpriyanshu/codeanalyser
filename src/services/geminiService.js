@@ -84,7 +84,9 @@ export const analyzeCode = async (javaCode) => {
     // First perform our own syntax validation
     const syntaxIssues = validateBasicSyntax(javaCode);
 
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const model = genAI.getGenerativeModel({ 
+      model: "gemini-1.5-pro" // Try this updated model name
+    });
     
     const prompt = `As a Java code analysis expert, perform a comprehensive analysis of the following code. Provide detailed, actionable feedback in the following categories:
 
